@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ username }}'s User Space
+{% endblock %}
+
+{% block navbar %}<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">AI Counter</a>
+  <form class="form-inline">
+    <div class="brand-nav mr-2 my-sm-0">{{ username }} </div>
+    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log Out</button>
+  </form>
+</nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+          <h1>AI Counter</h1>
+            <h4>Helps you every day... anytime</h4>
+        <p></p>
+        <p></p>
+                <div class="row">
+                    <div class="form-group col-xl-4 col-md-4 col-sm-12">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>All zones</option>
+                            <option>Fav 1</option>
+                            <option>Fav 2</option>
+                            <option>Fav 3</option>
+                            <option>Fav 4</option>
+                            <option>Fav 5</option>
+                            <option>Zone 1</option>
+                            <option>Zone 2</option>
+                            <option>Zone 3</option>
+                            <option>Zone 4</option>
+                            <option>Zone 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group  col-xl-4 col-md-4 col-sm-12">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Day</option>
+                            <option>Week</option>
+                            <option>Year</option>
+                        </select>
+                    </div>
+                    <div class=" col-xl-4 col-md-4 col-sm-12">
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+    <div class="container">
+        <div class="row">
+            {% block graphs %}
+
+            {% endblock %}
+        </div>
+            </div>
+    </div>
+
+{% endblock %}
